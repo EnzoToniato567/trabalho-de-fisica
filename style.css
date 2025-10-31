@@ -1,45 +1,203 @@
-body {
-    font-family: Segeo UI, sans-serif;
+* {
     margin: 0;
-    background-color: beige;
-    color: black;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0c0c0c;
+    color: #f2f2f2;
+    line-height: 1.6;
 }
 
 header {
-    color: #fff;
-    background: rgb(0, 98, 34);
-    padding: 20px;
-    text-align: center;
+    background: #111;
+    padding: 05px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.15);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 28px;
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    color: #ffd700;
+}
+
+#img-radiacao {
+    width: 28px;
+    height: 28px;
+    margin-left: 10px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 18px;
 }
 
 nav a {
-    color: rgb(178, 214, 60);
     text-decoration: none;
-    font-weight: bold; /*Negrito*/
+    color: #f2f2f2;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    color: rgb(0, 173, 171);
+    color: #ffd700;
+    text-shadow: 0 0 8px #ffd700;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
+section {
+    padding: 100px 0 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1.5px 3px rgba(233, 255, 232, 0.912);
+    transition: all 0.6s ease-out;
+    opacity: 1;
 }
 
+.section-titulo, .titulo, .integrantes {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1b1b1b;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.card p, .card ul {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+    border-color: rgba(255, 215, 0, 0.2);
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #1b1b1b;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.tabela th, .tabela td {
+    padding: 15px;
+    text-align: center;
+}
+
+.tabela thead {
+    background: #222;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.tabela tbody tr:nth-child(even) {
+    background: #141414;
+}
+
+.tabela tbody tr:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transition: 0.3s;
+}
+
+#tabela {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background: #1b1b1b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#tabela td {
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#tabela tr:hover {
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        border-left: 2px solid #ffd700;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+}

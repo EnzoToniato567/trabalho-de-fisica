@@ -38,8 +38,6 @@ header {
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.3rem;
     display: flex;
     align-items: center;
     color: #ffd700;

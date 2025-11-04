@@ -87,7 +87,7 @@ section {
 
 .content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -175,6 +175,47 @@ ul li {
     color: #ffd700;
 }
 
+.card-comparacao {
+    background: #1b1b1b;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.card-comparacao {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-comparacao h3 {
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.card-comparacao img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-comparacao p {
+    color: #ddd;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.card-comparacao:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+    border-color: rgba(255, 215, 0, 0.2);
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -199,5 +240,12 @@ ul li {
 
     .logo {
         margin-bottom: 10px;
+    }
+
+    .card-comparacao .imagens-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: start;
     }
 }

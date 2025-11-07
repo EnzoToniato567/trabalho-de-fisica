@@ -118,11 +118,22 @@
                 <div class="card card-comparacao">
                     <div class="card-body">
                         <div class="imagens-container"></div>
-                            <h3>Comparação Visual</h3>
-                        <div>
-                            <img src="comparacao.webp" alt="Comparação entre tipos de radiação">
-                            <p>Comparação entre alguns tipos de ondas</p>
+                        <section id="simulador-css">
+                            <div class="container">
+                                <h2 class="section-titulo">Simulador de Penetração da Radiação Gama</h2>
+                                <div class="simulador">
+                                <div class="fonte">☢️</div>
+                                <div class="raios"></div>
+                                <div class="barreira" id="barreira">Papel</div>
+                            </div>
+                                <label for="material">Escolha o material:</label>
+                                <select id="material">
+                                <option value="papel">Papel</option>
+                                <option value="aluminio">Alumínio</option>
+                                <option value="chumbo">Chumbo</option>
+                        </select>
                         </div>
+                </section>
                     <div>
                             <img src="radiacao2.webp" alt="Comparação entre todas as radiações">
                              <p>Poder de penetração das radiações alfa, beta e gama</p>
@@ -140,7 +151,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h3>Medicina</h3>
-                        <p>Radioterapia para câncer, higienização de equipamentos, diagnóstico por imagem (PET scan) e medicina nuclear.</p>
+                        <p>Radioterapia para câncer, esterilização de equipamentos, diagnóstico por imagem (PET scan) e medicina nuclear.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -177,7 +188,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h3>Desinfecção</h3>
+                        <h3>Esterilização</h3>
                         <p>Esteriliza equipamentos médicos sem deixar resíduos químicos, garantindo segurança em procedimentos cirúrgicos.</p>
                     </div>
                 </div>
@@ -191,6 +202,8 @@
         </div>
     </section>
 
+    <script src="script.js"></script>
+    
     <section id="membros">
         <div class="container">
             <h2 class="integrantes">Integrantes</h2>
@@ -209,7 +222,3 @@
 
 </body>
 </html>
-
-
-
-
